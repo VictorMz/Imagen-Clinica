@@ -6,6 +6,24 @@ body{
     background: #fff;
 }
 
+.header {
+    margin-top: 2%;
+}
+
+.header div.col-sm-3:first-child p{
+	font-size: 1.8em;
+    margin-left: 20px;
+    color: #966305;
+}
+
+.header div img.img-responsive {
+    display: inline-block;
+}
+
+.top .main-menu  nav{
+	margin-bottom: 1px;
+}
+
 div#bs-example-navbar-collapse-c {
     text-align: center;
 }
@@ -13,6 +31,10 @@ div#bs-example-navbar-collapse-c {
 .navbar.center .navbar-collapse .nav {
     float: none;
     display: inline-block;
+}
+
+.data-mobile img, .data-mobile h4{
+	display: inline-block;
 }
 
 footer{
@@ -26,4 +48,20 @@ footer{
 
 .container.information-iclinica{
 	padding-bottom: 2%;
+}
+
+
+@media only screen and (min-width: 768px){
+	.top .main-menu {
+		border-top: 1px solid;
+		margin-top: 1%;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.navbar {
+		margin-top: 10px;
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+	}
 }
