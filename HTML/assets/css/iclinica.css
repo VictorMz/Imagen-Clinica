@@ -1,0 +1,20 @@
+body{
+   background: #dad4d9;
+}
+
+.top{
+    background: #fff;
+}
+
+footer{
+    background: #ababab;
+    border-top: 3px solid;
+    padding-top: 10px;
+}
+.social{
+	text-align: center;
+}
+
+.container.information-iclinica{
+	padding-bottom: 2%;
+}
