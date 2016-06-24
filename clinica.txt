@@ -1,0 +1,20 @@
+Sitio: imagenclinica
+
+http://www.imagenclinica.com.mx/cpanel
+Usuario: imagenc1
+Contraseña: 31kzVon07B
+
+
+FTP:
+Nombre de usuario de FTP: imagencp1@imagenclinica.com.mx
+Servidor FTP: ftp.imagenclinica.com.mx
+Puerto FTPS explícito de FTP &:  21
+pass: victormz21990
+
+
+
+DRUPAL
+http://www.imagenclinica.com.mx/
+us: admin
+pa: imagenclinica2016.
+
