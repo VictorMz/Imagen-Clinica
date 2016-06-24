@@ -14,15 +14,28 @@
 
 		<!-- CSS Files -->
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/css/iclinica.css" rel="stylesheet" />
+		<link href="assets/css/iclinica-home.css" rel="stylesheet" />
 		
 	</head>
 
 	<body>
         <div class="container"><!-- datos de la clinica, logo , tel, etc-->
-		
+			<div>
+				<div class="col-sm-4">
+					<p>Hola en imagen clinica nos interesa tu salud</p>
+				</div>
+				<div class="col-sm-4">
+					<img src="http://placehold.it/200x140" class="img-responsive">
+				</div>
+				<div class="col-sm-4">
+					<p>Hola en imagen clinica nos interesa tu salud</p>
+					<p>Hola en imagen clinica nos interesa tu salud</p>
+				</div>
+			</div>
 		</div>
 				
-        <div class="container-fluid"><!-- parte fluida -->
+        <div class="top container-fluid"><!-- parte fluida -->
 		
 		    <nav id="navbar-main" class="navbar navbar-center" role="navigation"><!-- menu -->
 				<div class="container">
@@ -54,17 +67,92 @@
 				</div>
 			</nav>
 			
-			<div class="slider"> <!-- slider -->
 			
+			<div id="myCarousel" class="carousel slide"><!-- slider -->
+				  <!-- Dot Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+				  <!-- Items -->
+				<div class="carousel-inner">
+					<div class="active item">  
+						<img src="http://placehold.it/1350x450" class="img-responsive">
+						<div class="carousel-caption">
+							<a href="#"><button class="btn">M&aacute;s Promociones</button></a>
+						</div>
+					</div>
+					<div class="item">  
+						<img src="http://placehold.it/1350x450" class="img-responsive">
+						<div class="carousel-caption">
+							<a href="#"><button class="btn">M&aacute;s Promociones</button></a>
+						</div>
+					</div>
+					<div class="item">  
+						<img src="http://placehold.it/1350x450" class="img-responsive">
+						<div class="carousel-caption">
+							<a href="#"><button class="btn">M&aacute;s Promociones</button></a>
+						</div>
+					</div>
+				</div>
+				  <!-- Navigation -->
+						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+							<i class="fa fa-chevron-left" aria-hidden="true"></i>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" data-slide="next">
+							<i class="fa fa-chevron-right" aria-hidden="true"></i>
+						</a>
 			</div>
 			
 			<div class="banner-clinica"> <!-- banner clinica -->
-			
+			    <div class="container">
+					<h1>Imagen Clinica</h1>
+					<p>Imagen Clinica es un gabinete médico que durante mas de 20 años, se esfuerza por auxiliar a los medicos tratantes a arribar a diagnósticos certeros en beneficio de los pacientes</p>
+			    </div>
 			</div>
 			
 		</div> 
 		
 		<div class="container content-main"> <!-- contenido principal -->
+		
+			<div class="row options">
+				<div class="col-sm-4">
+					<img src="http://placehold.it/360x400" class="img-responsive">
+				</div>
+				
+				<div class="col-sm-4">
+					<img src="http://placehold.it/360x400" class="img-responsive">
+				</div>
+				
+				<div class="col-sm-4">
+					<img src="http://placehold.it/360x400" class="img-responsive">
+				</div>			
+			</div>
+			
+			<div class="row tags">
+				<ul>
+					<li>Analisis Clinicos</li>
+					<li>Laboratorio</li>
+					<li>Estudios Cardiacos</li>
+					<li>Tiroides</li>
+					<li>Estudios Renales</li>
+					<li>Gammagrafias</li>
+					<li>Estudios Hepaticos</li>
+					<li>Ultrasonidos</li>	
+					<li>Tratamientos con yodo 131</li>					
+				</ul>
+				
+			</div>
+			
+			<div class="row contact-us">
+				<div class="col-sm-6">
+					<h3>Contáctanos</h3>
+				</div>
+				<div class="col-sm-6">
+					<h3>Visítanos</h3>
+				</div>
+			</div>
 
 		</div>
 

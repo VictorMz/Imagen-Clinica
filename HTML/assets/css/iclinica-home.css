@@ -1,0 +1,56 @@
+.top.container-fluid {
+    padding: 5px 1px;
+}
+
+.banner-clinica{
+    min-height: 300px;
+    background-position: center center;
+    background-size: cover;
+	background: url("../img/banner.jpg");
+    background-color: #313619;
+	margin-top: 5%;
+	margin-bottom: 4%;
+}
+
+.banner-clinica .container {
+    padding: 5% 8%;
+}
+
+.banner-clinica .container h1{
+	text-align: center;
+	margin-bottom: 3%;
+}
+
+.content-main .row{
+	margin-bottom: 4%;
+}
+.row.tags {
+    border: 2px solid;
+    padding: 4%;
+	margin-left: 0;
+    margin-right: 0;
+}
+
+.tags ul:first-child{
+	display: block;
+	margin-bottom: 1px;
+}
+
+.tags ul:first-child li{
+	display: inline-block;
+    margin: 1% 2%;
+}
+
+.row.contact-us h3{
+	text-align: center;
+    background: #40aff3;
+    padding: 2%;
+}
+/* media */
+
+@media only screen and (max-width: 768px){
+	.top.container-fluid  > .banner-clinica{
+		min-height: 170px;
+		background-position: center center;
+	}
+}
