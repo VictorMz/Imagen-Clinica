@@ -84,21 +84,18 @@
 				</div>
 			</div>
 	
-			<div class="container content-main"> <!-- contenido principal -->
+	        <div class="header-image">
+				<img src="<?php print iClinica_file_directory_path().'/'.render($page['content']['system_main']['nodes'][8]['field_image_header_section']['#items'][0]['filename']); ?>" class="img-responsive">
+			</div>			
 			
-				<div id="content" class="column">
-				    <?php print $messages; ?>
-					<a id="main-content"></a>
-					<?php print render($title_prefix); ?>
-					<?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
-					<?php print render($title_suffix); ?>
-					<?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-					<?php print render($page['help']); ?>
-					<?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-					<?php print render($page['content']); ?>
-					<?php print $feed_icons; ?>
-				</div>
-
+			<div class="container content-main"> <!-- contenido principal -->
+			<h1 class="title" id="page-title"><?php print render($node->field_title_sectioin['und'][0]['value']); ?></h1>
+            <?php   if ($is_admin){ 
+						if ($tabs): ?>
+							<div class="tabs"><?php print render($tabs); ?></div>
+					<?php endif; 
+					} ?>
+            <?php print render($node->body['und'][0]['value']); ?>
 			</div>
 
 			<?php include 'include/footer.php' ?>

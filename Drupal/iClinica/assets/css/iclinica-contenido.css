@@ -1,0 +1,24 @@
+.container.content-main {
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.container.content-main h1{
+    text-transform: uppercase;
+    color: #0b2b66;
+	margin-bottom: 2%;
+}
+
+.container.content-main b{
+	font-weight: 800;
+    font-size: 30px;
+}
+
+/* media */
+
+@media only screen and (min-width: 768px){
+	
+}
+@media only screen and (max-width: 768px){
+	
+}

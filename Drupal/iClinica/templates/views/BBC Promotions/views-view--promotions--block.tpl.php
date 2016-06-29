@@ -54,23 +54,9 @@
   //kpr($rows);
   //echo count($rows);
   if ($rows): ?>
-    <div id="myCarousel" class="carousel slide">
+    
+	<?php print $rows; ?>	
 	
-	    <ol class="carousel-indicators">
-			
-		</ol>
-					
-	    <div class="carousel-inner">
-			 <?php print $rows; ?>			 
-		</div>
-        <!-- Navigation -->
-		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			<i class="fa fa-angle-left fa-border my-carousel-left" aria-hidden="true"></i>
-		</a>
-		<a class="right carousel-control" href="#myCarousel" data-slide="next">
-			<i class="fa fa-angle-right fa-border my-carousel-right" aria-hidden="true"></i>
-		</a>
-	</div>
   <?php elseif ($empty): ?>
     <div class="view-empty">
       <?php print $empty; ?>

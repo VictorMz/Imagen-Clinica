@@ -103,6 +103,10 @@
 	.my-carousel-left, .my-carousel-right{
 		font-size: 3em;
 	}	
+	
+	.options button{
+		margin-top: -35%;
+	}
 }
 @media only screen and (max-width: 768px){
 	div#myCarousel, .carousel-inner img.img-responsive{

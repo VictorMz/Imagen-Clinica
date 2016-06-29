@@ -14,6 +14,7 @@ scripts[] = assets/js/modernizr.js
 scripts[] = assets/js/html5shiv.min.js
 scripts[] = assets/js/respond.min.js
 scripts[] = assets/js/bootstrap.min.js
+scripts[] = assets/js/iclinica.js
 
 ; Regions
 regions[page_top] = Page top
@@ -21,6 +22,7 @@ regions[page_top_information] = Information
 regions[main_menu] = Main Menu
 regions[slide_home] = Slider Header
 regions[content] = Content
+regions[promotions] = Promotions
 regions[contact] = Contact
 regions[page_bottom] = Page bottom
 regions[footer] = Footer

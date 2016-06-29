@@ -18,3 +18,10 @@ http://www.imagenclinica.com.mx/
 us: admin
 pa: imagenclinica2016.
 
+
+
+anaranjado: #ff752e
+azul marino: #2c3e50
+azul cielo: #2ec3ff
+
+

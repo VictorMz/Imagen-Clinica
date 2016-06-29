@@ -2,6 +2,30 @@ body{
    background: #dad4d9;
 }
 
+#navbar-main.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:10;
+}
+
+.search i.fa.fa-search.fa-2x {
+    margin-top: 15px;
+	cursor: pointer;
+}
+
+.data p{
+	margin-bottom: 2px;
+}
+
+.phone-top, .whats-top, .location-top{
+	margin-bottom: 11px;
+}
+
+.whats-top i.fa.fa-whatsapp.fa-2x{
+	margin-left: 5px;
+}
+
 .top{
     background: #fff;
 }

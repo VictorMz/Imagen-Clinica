@@ -78,80 +78,15 @@
 				<div class="container"><!-- datos de la clinica, logo , tel, etc-->
 					<div class="row header hidden-xs">
 					
-					    <?php if (!empty($site_slogan)): ?>
-							<div class="col-md-3 col-sm-6 col-xs-6">
-								<?php print $site_slogan; ?>
-							</div>
-						<?php endif; ?>
-						
-						<div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-6 text-center">
-							<img src="http://placehold.it/200x140" class="img-responsive">
-						</div>
-						
-						<div class="col-md-3 col-md-offset-2 hidden-sm">
-							<div class="row phone-top">
-								<div class="col-xs-2">
-									<i class="fa fa-phone fa-3x fa-pull-left" aria-hidden="true"></i>
-								</div>
-								<div class="col-xs-10">
-									<?php print render($page['content']['system_main']['nodes'][3]['field_phones']['#items'][0]['value']);?>
-								</div>
-							</div>
-							<div class="row location-top">
-								<div class="col-xs-2">
-									<i class="fa fa-map-marker fa-3x fa-pull-left" aria-hidden="true"></i>
-								</div>
-								<div class="col-xs-10">
-									<?php print render($page['content']['system_main']['nodes'][3]['field_direction']['#items'][0]['value']);?>
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-sm-12 visible-sm">
-							<div class="col-sm-6">
-								<i class="fa fa-phone fa-3x fa-pull-left" aria-hidden="true"></i>
-								<?php print render($page['content']['system_main']['nodes'][3]['field_phones']['#items'][0]['value']);?>
-							</div>
-							<div class="col-sm-6">
-								<i class="fa fa-map-marker fa-3x fa-pull-left" aria-hidden="true"></i>
-								<?php print render($page['content']['system_main']['nodes'][3]['field_direction']['#items'][0]['value']);?>
-							</div>
-						</div>
+						<?php include 'include/header.php' ?>
 						
 					</div>	
 				</div>
+				<div class="container">
+					<?php print $messages; ?>
+				</div>
 				<div class="row main-menu">
-						<nav id="navbar-main" class="navbar navbar-default center" role="navigation"><!-- menu -->
-							<div class="container">
-								<div class="navbar-header row">
-									<div class="col-xs-8 visible-xs data-mobile">
-										<img src="http://placehold.it/100x60" class="img-responsive">
-									</div>	
-									<div class="col-xs-4">								
-										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-c">
-											<span class="sr-only">Menu</span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-										</button>
-									</div>
-								</div>
-
-								<div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-c">
-								<?php if (!empty($page['main_menu'])): ?>
-									<ul class="nav navbar-nav">
-										<?php print render($page['main_menu']); ?>
-									</ul>
-								<?php endif; ?>
-								</div>
-								
-								<?php if (!empty($page['page_top_information'])): ?>
-								<div class="search">
-									<?php print render($page['page_top_information']); ?>
-								</div>
-								<?php endif; ?>								
-							</div>
-						</nav>
+					<?php include 'include/menu.php' ?>	
 				</div>
 			</div>
 					
@@ -160,7 +95,7 @@
 				<?php if (!empty($page['slide_home'])): ?> <!-- Slider -->
 				    <?php print render($page['slide_home']); ?>
 				<?php endif; ?>
-				
+
 				<div class="banner-clinica"> <!-- banner clinica -->
 					<div class="container">
 						<?php print render($page['content']['system_main']['nodes'][3]['field_text_banner']['#items'][0]['value']);?>
@@ -172,62 +107,65 @@
 			<div class="container content-main"> <!-- contenido principal -->
 			
 				<div class="row options text-center">
-					<div class="col-sm-4">
-						<img src="<?php print iClinica_file_directory_path()."/". render($page['content']['system_main']['nodes'][3]['field_image_promotions'][0]['#item']['filename']);?>" class="img-responsive">
-					</div>
-					
-					<div class="col-sm-4">
-						<img src="<?php print iClinica_file_directory_path()."/". render($page['content']['system_main']['nodes'][3]['field_image_promotions'][1]['#item']['filename']);?>" class="img-responsive">
-					</div>
-					
-					<div class="col-sm-4">
-						<img src="<?php print iClinica_file_directory_path()."/". render($page['content']['system_main']['nodes'][3]['field_image_promotions'][2]['#item']['filename']);?>" class="img-responsive">
-					</div>			
+				   
+				   <?php if (!empty($page['promotions'])): ?> <!-- Slider k va aser un bloque de imagenes -->
+						<?php print render($page['promotions']); ?>
+					<?php endif; ?>
+							
 				</div>
 				
-				<div class="row tags">
+				<div class="row tags hidden-xs">
 					<ul>
-						<li>Analisis Clinicos</li>
-						<li>Laboratorio</li>
-						<li>Estudios Cardiacos</li>
-						<li>Tiroides</li>
-						<li>Estudios Renales</li>
-						<li>Gammagrafias</li>
-						<li>Estudios Hepaticos</li>
-						<li>Ultrasonidos</li>	
-						<li>Tratamientos con yodo 131</li>					
+						<?php
+						$x=1;
+						foreach ($page['content']['system_main']['nodes'][3]['field_tags_home']['#items'] as $i => $value): ?>
+							<li><?php 
+							if($x == $i){
+								print '<b>'.$page['content']['system_main']['nodes'][3]['field_tags_home']['#items'][$i]['value'].'</b>'; 
+								$x+=2;
+							}else{
+								print $page['content']['system_main']['nodes'][3]['field_tags_home']['#items'][$i]['value'];					
+							}							
+							?>
+							</li>
+						<?php 				
+						endforeach;
+						?>				
 					</ul>
 					
 				</div>
 				
 				<div class="row contact-us">
 					<div class="col-sm-6 contact">
-						<h3>Contáctanos</h3>
-						<div class="container-fluid back-wt">						
-							<?php if (!empty($page['contact'])): ?> <!-- Slider k va aser un bloque de imagenes -->
-								<?php print render($page['contact']); ?>
-							<?php endif; ?>						
+					    <div class="border-shadow">
+							<h3>Contáctanos</h3>
+							<div class="container-fluid back-wt">
+								<div class="form-area"> 
+									<p>Dudas, sugerencias o comentarios. Envíarlas aqui:</p>
+									<?php if (!empty($page['contact'])): ?> 
+										<?php print render($page['contact']); ?>
+									<?php endif; ?>	
+								</div>							
+							</div>
 						</div>
 					</div>
 					<div class="col-sm-6 map">
-						<h3>Visítanos</h3>
-						<div class="container-fluid back-wt">
-							<p>Nos ubicamos en Cuauhtemoc 797</p>
-							<?php 
-							$lat = $page['content']['system_main']['nodes'][3]['field_latitud_home']['#items'][0]['value'];
-							$log = $page['content']['system_main']['nodes'][3]['field_longitud_home']['#items'][0]['value'];
-							?>
-							<iframe src="https://maps.google.com.mx/maps?f=q&hl=en&q=<?php print $lat; ?>,<?php print $log; ?>&iwloc=&ie=UTF8&t=m&z=15&output=embed" width="100%" frameborder="0"></iframe>
+					    <div class="border-shadow">
+							<h3>Visítanos</h3>
+							<div class="container-fluid back-wt">
+								<p>Nos ubicamos en Cuauhtemoc 797</p>
+								<?php 
+								$lat = $page['content']['system_main']['nodes'][3]['field_latitud_home']['#items'][0]['value'];
+								$log = $page['content']['system_main']['nodes'][3]['field_longitud_home']['#items'][0]['value'];
+								?>
+								<iframe src="https://maps.google.com.mx/maps?f=q&hl=en&q=<?php print $lat; ?>,<?php print $log; ?>&iwloc=&ie=UTF8&t=m&z=15&output=embed" width="100%" frameborder="0"></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 
 			</div>
 
-			<footer> <!-- footer -->
-			    <?php if (!empty($page['footer'])): ?> <!-- Slider k va aser un bloque de imagenes -->
-					<?php print render($page['footer']); ?>
-				<?php endif; ?>
-			</footer>
+			<?php include 'include/footer.php' ?>
 			
 		</div>

@@ -24,21 +24,23 @@
 ?>
 <?php
 
-if(count($row->field_field_image_slider_home) > 0):
-	$header = iClinica_file_directory_path()."/".$row->field_field_image_slider_home[0]['raw']['filename'];
+if(count($row->field_field_image_bbc_promotion_home) > 0):
+	$image = iClinica_file_directory_path()."/".$row->field_field_image_bbc_promotion_home[0]['raw']['filename'];
 endif;
-if(count($row->field_field_url_img_slider_home) > 0):
-	$url = $row->field_field_url_img_slider_home[0]['raw']['value'];
+if(count($row->field_field_link_bbc_promotions) > 0):
+	$url = $row->field_field_link_bbc_promotions[0]['raw']['value'];
 endif;
-$caption =  $row->field_field_text_button_slider_home[0]['raw']['safe_value'];
+$button =  $row->field_field_text_promotions[0]['raw']['value'];
 
 //kpr($row);
 ?>
-    <div class="item <?php ($id == 1) ? print 'active' : print ''; ?>">
-		<img src="<?php print $header; ?>" class="img-responsive">
-		<div class="carousel-caption">
-			<a href="<?php print $url; ?>">
-				<button class="btn"><?php print $caption; ?></button>
-			</a>
+    <div class="col-sm-4">
+		<div class="border-shadow">
+			<img src="<?php print $image; ?>" class="img-responsive">
+			<div class="col-xs-12">
+				<a href="<?php print $url; ?>">
+					<button type="button" class="btn btn-primary"><?php print $button; ?></button>
+				</a>
+			</div>
 		</div>
 	</div>
