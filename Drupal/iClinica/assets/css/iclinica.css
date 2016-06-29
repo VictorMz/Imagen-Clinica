@@ -16,13 +16,12 @@ body{
 	font-weight: 600;
 }
 
-#bs-example-navbar-collapse-c ul li:hover {
-    background: #3939f9;
+#bs-example-navbar-collapse-c ul li:hover, #bs-example-navbar-collapse-c ul li.active-trail {
+    background: #18bdff;
 }
 
-#bs-example-navbar-collapse-c ul li:hover a{
-    color: #fff;
-	font-weight: 700;
+#bs-example-navbar-collapse-c ul li.active-trail a.active{
+	color: #fff;
 }
 
 #myModalSearch .modal-dialog{

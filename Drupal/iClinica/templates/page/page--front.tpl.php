@@ -98,7 +98,7 @@
 
 				<div class="banner-clinica"> <!-- banner clinica -->
 					<div class="container">
-						<?php print render($page['content']['system_main']['nodes'][3]['field_text_banner']['#items'][0]['value']);?>
+						<?php print render($node->field_text_banner['und'][0]['value']);?>
 					</div>
 				</div>
 				
@@ -155,8 +155,8 @@
 							<div class="container-fluid back-wt">
 								<p>Nos ubicamos en Cuauhtemoc 797</p>
 								<?php 
-								$lat = $page['content']['system_main']['nodes'][3]['field_latitud_home']['#items'][0]['value'];
-								$log = $page['content']['system_main']['nodes'][3]['field_longitud_home']['#items'][0]['value'];
+								$lat = $node->field_latitud_home['und'][0]['value'];
+								$log = $node->field_longitud_home['und'][0]['value'];
 								?>
 								<iframe src="https://maps.google.com.mx/maps?f=q&hl=en&q=<?php print $lat; ?>,<?php print $log; ?>&iwloc=&ie=UTF8&t=m&z=15&output=embed" width="100%" frameborder="0"></iframe>
 							</div>

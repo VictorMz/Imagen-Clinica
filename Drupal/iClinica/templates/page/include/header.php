@@ -1,14 +1,14 @@
-<div class="col-md-3 col-sm-6 col-xs-6">
+<div class="col-md-4 col-sm-6 col-xs-6 text-center">
 							<img src="<?php print $logo_200x140; ?>" class="img-responsive">
 						</div>
 						
 						<?php if (!empty($site_slogan)): ?>
-						<div class="col-md-3 col-md-offset-1 col-sm-6 col-xs-6 slogan text-center">							
+						<div class="col-md-4 col-sm-6 col-xs-6 slogan text-center">							
 							<?php print $site_slogan; ?>
 						</div>
 						<?php endif; ?>
 						
-						<div class="col-md-3 col-md-offset-2 hidden-sm data">
+						<div class="col-md-3 col-md-offset-1 hidden-sm data">
 							<div class="row phone-top">
 								<div class="col-xs-2">
 									<span class="fa-stack fa-lg">
