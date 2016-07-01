@@ -60,6 +60,10 @@ function iClinica_get_link_content($row){ // obtiene la URL del contenido
 		global $base_path;
 		$data = 'node/'.$row->nid;
 		$result = drupal_lookup_path('alias', $data);
+		
+		if($result == ''){
+			$result = 'node/'.$row->nid;
+		}
 		/*if($row->_field_data['nid']['entity']->language != 'en'):
 			$result = $row->_field_data['nid']['entity']->language.'/'.$result;
 		endif; */

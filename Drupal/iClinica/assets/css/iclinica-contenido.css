@@ -110,11 +110,11 @@
 	padding: 0;
 }
 
-.list-card div.card{
-	margin-bottom: 30px;
+div.card{
+	margin-bottom: 40px;
 }
 
-.list-card div.card h2{
+div.card h2{
 	padding-bottom: 20px;
     text-transform: uppercase;
     border-bottom: 3px solid #0b2b66;
@@ -122,6 +122,17 @@
     color: #ff752e;
 }
 
+.card-view div.card{
+	margin-bottom: 60px;
+}
+
+.card-view div.card:first-child h2{
+	display: none;
+}
+
+.row-study .info-study{
+	margin: 1% 1.5%;
+}
 /* fin cards*/
 
 .row-study button {
@@ -140,10 +151,6 @@
 	    color: #ff752e;
 }
 
-.card-vacunas{
-	padding-top: 30px;
-}
-
 div.row.row-vacunas {
     margin: 1% 0;
     border-bottom: 1px solid #0b2b66;
@@ -160,6 +167,51 @@ div.row.row-vacunas {
 .row-vacunas .vac-name, .row-vacunas .vac-cost {
     display: inline-block;
     width: 30%;
+}
+
+.container.search-study {
+    margin-bottom: 15px;
+    border-top: 2px solid;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    text-align: center;
+	color: #0b2b66;
+}
+
+.search-study input#input-search {
+    width: 40%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    margin: 15px;
+    outline: 0;
+    height: 2.6em;
+    border-radius: 5px;
+    color: #ff752e;
+}
+
+ul.list-study-type {
+    padding: 10px;
+    list-style: none;
+	margin-bottom: 20px;
+}
+
+.list-study-type li {
+    margin: 10px 10px 0;
+    border-bottom: 1px solid #ff752e;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+ul.list-study-type li:hover {
+    background: #ff752e;
+    margin-top: 0px;
+    padding-top: 20px;
+	cursor: pointer;
+}
+
+.list-study-type li * {
+    color: #0b2b66;
 }
 
 /* media */

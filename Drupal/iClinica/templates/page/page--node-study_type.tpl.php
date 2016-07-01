@@ -72,100 +72,68 @@
  * @ingroup themeable
  */
 ?>
-
-    <div class="wrapper">
+  <div class="wrapper">
 			<div class="container-fluid top">
-				<div class="container"><!-- datos de la clinica, logo , tel, etc-->
-					<div class="row header hidden-xs">
-					
-						<?php include 'include/header.php' ?>
-						
-					</div>	
-				</div>
 				<div class="container">
-					<?php print $messages; ?>
+					<div class="row header hidden-xs">										    
+						<?php include 'include/header.php' ?>						
+					</div>	
 				</div>
 				<div class="row main-menu">
 					<?php include 'include/menu.php' ?>	
 				</div>
 			</div>
-					
-			<div class="container-fluid promotions">
-                
-				<?php if (!empty($page['slide_home'])): ?> <!-- Slider -->
-				    <?php print render($page['slide_home']); ?>
-				<?php endif; ?>
-
-				<div class="banner-clinica"> <!-- banner clinica -->
-					<div class="container">
-						<?php print render($node->field_text_banner['und'][0]['value']);?>
-					</div>
-				</div>
-				
-			</div> 
+	
+	        <?php 
+			if($node->field_image_header_section):
+			?>
+	        <div class="header-image">
+				<img src="<?php print iClinica_file_directory_path().'/'.render($node->field_image_header_section['und'][0]['filename']); ?>" class="img-responsive">
+			</div>			
+			<?php endif; ?>			
 			
 			<div class="container content-main">
-			
-				<div class="row options text-center">
-				   
-				   <?php if (!empty($page['promotions'])): ?>
-						<?php print render($page['promotions']); ?>
-					<?php endif; ?>
-							
-				</div>
+				<h1 class="title" id="page-title"><?php 
+				if(count($node->field_title_sectioin) > 0){
+					print render($node->field_title_sectioin['und'][0]['value']); 
+				}else{
+					print render($node->title); 
+				}
+				?></h1>
 				
-				<div class="row tags hidden-xs">
-					<ul>
-						<?php
-						$x=1;
-						foreach ($page['content']['system_main']['nodes'][3]['field_tags_home']['#items'] as $i => $value): ?>
-							<li><?php 
-							if($x == $i){
-								print '<b>'.$page['content']['system_main']['nodes'][3]['field_tags_home']['#items'][$i]['value'].'</b>'; 
-								$x+=2;
-							}else{
-								print $page['content']['system_main']['nodes'][3]['field_tags_home']['#items'][$i]['value'];					
-							}							
-							?>
-							</li>
-						<?php 				
-						endforeach;
-						?>				
-					</ul>
-					
+				 <?php   if ($is_admin){ 
+							if ($tabs): ?>
+								<div class="tabs"><?php print render($tabs); ?></div>
+						<?php endif; 
+						} ?>
+						
+				<?php if(count($node->body) > 0):?>
+				<div class="main row">
+					<?php print render($node->body['und'][0]['value']); ?>
 				</div>
+				<?php endif; ?>
 				
-				<div class="row contact-us">
-					<div class="col-sm-6 contact">
-					    <div class="border-shadow">
-							<h3>Contáctanos</h3>
-							<div class="container-fluid back-wt">
-								<div class="form-area"> 
-									<p>Dudas, sugerencias o comentarios. Envíarlas aqui:</p>
-									<?php if (!empty($page['contact'])): ?> 
-										<?php print render($page['contact']); ?>
-									<?php endif; ?>	
-								</div>							
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-6 map">
-					    <div class="border-shadow">
-							<h3>Visítanos</h3>
-							<div class="container-fluid back-wt">
-								<p>Nos ubicamos en Cuauhtemoc 797</p>
+				<?php if(count($node->field_study_name_study_name) > 0):?>
+				<div class="container search-study">
+					<h3>¿Te interesa algun estudio?</h3>
+					<input type="search" id="input-search" name="s" placeholder="Buscar estudio..." >
+				</div>
+
+				<div class="row">
+					<div class="container">
+						<ul class="list-study-type">
+						<?php   foreach ($node->field_study_name_study_name['und'] as $i => $value): ?>
+							<li>
 								<?php 
-								$lat = $node->field_latitud_home['und'][0]['value'];
-								$log = $node->field_longitud_home['und'][0]['value'];
-								?>
-								<iframe src="https://maps.google.com.mx/maps?f=q&hl=en&q=<?php print $lat; ?>,<?php print $log; ?>&iwloc=&ie=UTF8&t=m&z=15&output=embed" width="100%" frameborder="0"></iframe>
-							</div>
-						</div>
-					</div>
+									print render($node->field_study_name_study_name['und'][$i]['safe_value']);					
+									?>
+							</li>
+						<?php   endforeach; ?>
+						</ul>
+					</div>				
 				</div>
-
-			</div>
-
+				<?php endif; ?>
+            </div>
 			<?php include 'include/footer.php' ?>
 			
 		</div>
