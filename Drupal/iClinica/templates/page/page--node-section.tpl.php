@@ -74,7 +74,7 @@
 ?>
   <div class="wrapper">
 			<div class="container-fluid top">
-				<div class="container"><!-- datos de la clinica, logo , tel, etc-->
+				<div class="container">
 					<div class="row header hidden-xs">										    
 						<?php include 'include/header.php' ?>						
 					</div>	
@@ -84,19 +84,23 @@
 				</div>
 			</div>
 	
+	        <?php 
+			if($node->field_image_header_section):
+			?>
 	        <div class="header-image">
 				<img src="<?php print iClinica_file_directory_path().'/'.render($node->field_image_header_section['und'][0]['filename']); ?>" class="img-responsive">
 			</div>			
+			<?php endif; ?>			
 			
-			<div class="container content-main"> <!-- contenido principal -->
-			<h1 class="title" id="page-title"><?php print render($node->field_title_sectioin['und'][0]['value']); ?></h1>
-            <?php   if ($is_admin){ 
-						if ($tabs): ?>
-							<div class="tabs"><?php print render($tabs); ?></div>
-					<?php endif; 
-					} ?>
-            <?php print render($node->body['und'][0]['value']); ?>
-			</div>
+			<?php 
+			
+			if($node->nid == 16){
+				include 'page-node/node-study-results.php';
+			}else{
+				include 'page-node/node-general.php';
+			}
+			
+			?>
 
 			<?php include 'include/footer.php' ?>
 			

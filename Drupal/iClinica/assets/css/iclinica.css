@@ -211,6 +211,7 @@ footer{
 	
 	#bs-example-navbar-collapse-c ul.navbar-nav li{
 		border-right: 1px solid;
+		padding: 0;
 	}
 	
 	#bs-example-navbar-collapse-c ul li:last-child{

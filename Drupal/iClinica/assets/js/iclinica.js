@@ -13,7 +13,7 @@
 		for	(i = 0; i < myDiv; i++) {
 	         $('#myCarousel .carousel-indicators').append('<li data-target="#myCarousel" data-slide-to="'+i+'" '+ classItem +'></li>');
              classItem = '';
-		}		
+		}
 
 	});
 		

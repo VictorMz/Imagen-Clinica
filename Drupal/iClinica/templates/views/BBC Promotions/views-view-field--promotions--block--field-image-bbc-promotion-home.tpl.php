@@ -27,9 +27,11 @@
 if(count($row->field_field_image_bbc_promotion_home) > 0):
 	$image = iClinica_file_directory_path()."/".$row->field_field_image_bbc_promotion_home[0]['raw']['filename'];
 endif;
-if(count($row->field_field_link_bbc_promotions) > 0):
+if(count($row->field_field_link_bbc_promotions) > 0){
 	$url = $row->field_field_link_bbc_promotions[0]['raw']['value'];
-endif;
+}else{
+	$url = iClinica_get_link_content($row);
+}
 $button =  $row->field_field_text_promotions[0]['raw']['value'];
 
 //kpr($row);

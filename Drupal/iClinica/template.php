@@ -56,14 +56,15 @@ function iClinica_file_directory_path() {
   return $base_url."/".$path;
 }
 
-function iClinica_preprocess_image(&$vars){
-	$vars['attributes']['class'][] = 'img-responsive';
-}
-
-function iClinica_preprocess_image_style(&$vars){
-	$vars['attributes']['class'][] = 'img-responsive';
-}
-
+function iClinica_get_link_content($row){ // obtiene la URL del contenido
+		global $base_path;
+		$data = 'node/'.$row->nid;
+		$result = drupal_lookup_path('alias', $data);
+		/*if($row->_field_data['nid']['entity']->language != 'en'):
+			$result = $row->_field_data['nid']['entity']->language.'/'.$result;
+		endif; */
+		return $base_path.$result;
+	}
 function iClinica_menu_tree(&$variables) {
   $menu_level = isset($variables['tree_raw']['#depth']) ? $variables['tree_raw']['#depth'] : 1;
   $class = "nav navbar-nav";
