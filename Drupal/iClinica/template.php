@@ -14,7 +14,6 @@ function iClinica_preprocess_html(&$vars) {
          drupal_add_css( path_to_theme().'/assets/css/iclinica-contenido.css', array('group' => CSS_THEME ));
 	 }
 	 
-	 /*drupal_add_js('https://code.jquery.com/jquery-1.12.4.min.js', 'external');*/
 }
 
 function iClinica_preprocess_page(&$variables){

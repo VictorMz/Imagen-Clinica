@@ -94,7 +94,7 @@
 			
 			<?php 
 			
-			if($node->nid == 16){
+			if(iClinica_get_link_content($node)=='/resultados'){
 				include 'page-node/node-study-results.php';
 			}else{
 				include 'page-node/node-general.php';

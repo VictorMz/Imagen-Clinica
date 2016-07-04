@@ -113,7 +113,7 @@ body{
     line-height: 1.6;
 }
 
-.data p, .mv-data p{
+.data p, .mv-data p, form#user-pass .form-item label{
 	margin-bottom: 2px;
 	color: #0b2b66;
 }
@@ -126,7 +126,7 @@ body{
 	margin-bottom: 11px;
 }
 
-.phone-top span.fa-stack, .location-top span.fa-stack, .whats-top i.fa-whatsapp, .search i.fa-search, .mv-data span.fa-stack, .mv-data  i.fa-whatsapp, #myModalSearch .modal-dialog .modal-content .modal-header i {
+.phone-top span.fa-stack, .location-top span.fa-stack, .whats-top i.fa-whatsapp, .search i.fa-search, .mv-data span.fa-stack, .mv-data  i.fa-whatsapp, #myModalSearch .modal-dialog .modal-content .modal-header i, form .description {
 	color: #ff752e;
 }
 
@@ -173,6 +173,10 @@ footer{
     background: #dcdcdc;
     border-top: 3px solid #5f7394;
     padding-top: 10px;
+}
+
+.mv-data span.fa-stack.fa-lg.fa-pull-left {
+    margin-bottom: 7px;
 }
 
 .information-iclinica a {
@@ -236,6 +240,52 @@ footer{
 .back-wt{
     background: white;
     padding-bottom: 15px;
+}
+
+/* user register */
+
+#content div.tabs{
+	margin-top: 40px;
+}
+
+#content div.tabs ul.tabs.primary{
+    margin-bottom: 35px;
+    border-bottom: 2px solid #ff752e;
+    margin-left: 0;
+    padding-bottom: 4px;
+	padding-left: 0;
+}
+
+#content div.tabs ul.tabs.primary li a {
+    border-color: #ff752e;
+    background: #d3eef9;
+    color: #0b2b66;
+    padding: .3em 1em;
+}
+
+#content div.tabs ul.tabs.primary li.active a, #content div.tabs ul.tabs.primary li a:hover{
+    background: #18bdff;
+	color: #fff;
+}
+
+
+form#user-register-form .form-type-textfield, form#user-login .form-type-textfield, form#user-pass .form-item{
+    margin-bottom: 30px;
+    border-bottom: 1px solid #18bdff;
+    padding-bottom: 10px;
+}
+
+form#user-register-form .form-type-textfield label, form#user-login .form-item label{
+    width: 24%;
+    color: #0b2b66;
+}
+
+form#user-register-form input[type=submit], form#user-login input[type=submit]{
+    width: 20%;
+}
+
+form#user-pass input[type=submit]{
+    width: 30%;
 }
 
 @media only screen and (min-width: 768px){
@@ -305,4 +355,9 @@ footer{
 	.mv-data .fa-pull-left {
 		float: none;
 	}
+	
+	form#user-register-form .form-type-textfield label, form#user-login .form-item label, form#user-pass .form-item label, form#user-register-form div.form-actions input[type=submit], form#user-login div.form-actions input[type=submit], form#user-pass div.form-actions input[type=submit]{
+    width: 100%;
+	}
+	
 }
