@@ -13,6 +13,8 @@ function iClinica_preprocess_html(&$vars) {
 	 }else{
          drupal_add_css( path_to_theme().'/assets/css/iclinica-contenido.css', array('group' => CSS_THEME ));
 	 }
+	 
+	 /*drupal_add_js('https://code.jquery.com/jquery-1.12.4.min.js', 'external');*/
 }
 
 function iClinica_preprocess_page(&$variables){
@@ -46,6 +48,9 @@ function iClinica_preprocess_page(&$variables){
 				break;
 			case 2:
 			    return $node->field_whatsapp_home['und'][0]['value'];
+				break;
+			case 3:
+			    return $node->field_latitud_home['und'][0]['value'].','.$node->field_longitud_home['und'][0]['value'];
 				break;
 		} 		
 	}

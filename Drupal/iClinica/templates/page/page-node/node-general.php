@@ -32,4 +32,10 @@
 			</div>
 			<?php endif; ?>
 			
+			<?php if (!empty($page['contact'])): 
+			/* seccion unica para la seccion de contacto */
+				include 'node-contact.php';
+			endif;
+			?> 
+			
 		</div>

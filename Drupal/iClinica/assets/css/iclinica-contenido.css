@@ -50,6 +50,7 @@
 /* menu tabs */
 .main ul.med-nuc{
 	display: block;
+	text-align: right;
 }
 
 .med-nuc li {
@@ -70,12 +71,12 @@
 	margin-bottom: 10px;
 }
 
-.main ul.med-nuc li button:hover, .row-study button:hover {
+.main ul.med-nuc li button:hover, .row-study button:hover , .main ul.med-nuc li.active button{
     background: #18bdff;
 	cursor: pointer;
 }
 
-.main ul.med-nuc li button:hover span {
+.main ul.med-nuc li button:hover span, .main ul.med-nuc li.active button span {
 	color: #fff;
 }
 
@@ -114,7 +115,7 @@ div.card{
 	margin-bottom: 40px;
 }
 
-div.card h2{
+div.card h2, .pk-promociones h2{
 	padding-bottom: 20px;
     text-transform: uppercase;
     border-bottom: 3px solid #0b2b66;
@@ -152,8 +153,7 @@ div.card h2{
 }
 
 div.row.row-vacunas {
-    margin: 1% 0;
-    border-bottom: 1px solid #0b2b66;
+    margin: 0;
 }
 
 .row-vacunas .vac-name p {
@@ -162,6 +162,8 @@ div.row.row-vacunas {
 
 .row-vacunas > div {
     display: block;
+	border-bottom: 1px solid #0b2b66;
+	margin: 1% 0;
 }
 
 .row-vacunas .vac-name, .row-vacunas .vac-cost {
@@ -214,6 +216,69 @@ ul.list-study-type li:hover {
     color: #0b2b66;
 }
 
+ul.med-nuc.multifilter {
+    text-align: right;
+}
+
+.body-txt .pk-promociones {
+    padding-right: 1%;
+}
+
+.pk-promociones .card .border-shadow > h3{
+    background: #0b2b66;
+    padding: 10px 0;
+    margin-bottom: 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+}
+
+.pk-promociones .card ul{
+    margin: 30px 0;
+	text-align: left;
+}
+
+.pk-promociones .card ul li {
+    color: #0b2b66;
+    font-weight: 600;
+}
+
+.pk-promociones p.price {
+    color: #ff752e;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.pk-promociones .border-shadow {
+    box-shadow: 0px 0px 7px 3px;
+    color: #aba9a5;
+	text-align: center;
+}
+
+.list-promotions .col-sm-6:first-child ul {
+    padding: 0;
+}
+
+.list-promotions .col-sm-6 ul li {
+    border-bottom: 1px solid #18bdff;
+    list-style: none;
+    padding: 5px 0;
+}
+
+.list-promotions .col-sm-6 ul li p {
+    display: inline-block;
+    width: 70%;
+    color: #0b2b66;
+    margin-bottom: 0;
+}
+
+.list-promotions .col-sm-6 ul li p:nth-child(2) {
+    text-align: right;
+    color: #ff752e;
+    width: 25%;
+}
+
 /* media */
 
 @media only screen and (min-width: 768px){
@@ -225,6 +290,7 @@ ul.list-study-type li:hover {
 	}
 }
 @media only screen and (max-width: 768px){
+    
 	.content-main-study .content-user{
 		margin-bottom: 20px;
 	}
@@ -240,5 +306,18 @@ ul.list-study-type li:hover {
 	}
 	.card-txt{
 		padding-left: 0px;
+	}
+	
+	ul.med-nuc.multifilter, .main ul.med-nuc {
+		text-align: center;
+		margin-top: 45px;
+	}
+    
+	.pk-promociones .card img{
+		display: inline-block;
+	}
+
+	.list-promotions .col-sm-6:nth-child(2) ul {
+		padding: 0;
 	}
 }

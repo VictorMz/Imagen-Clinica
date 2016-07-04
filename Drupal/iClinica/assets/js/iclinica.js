@@ -23,42 +23,34 @@
             }).show();
         });
 		
-		$('ul.med-nuc li button').click(function() {
-
-			var textoFiltro = $(this).data("option");
-			if(textoFiltro == 'todos') 
-			{
-				$('div.body-txt div.hidden').fadeIn('slow').removeClass('hidden');
-			}
-			else
-			{
-				$('.body-txt div').each(function() {
-                    
-					var myId = $(this).data("group").split(",");
-					console.log('id->' + myId);
-					
-					for (i = 0; i < myId.length; i++) {
-						if (myId[i] != "") {
-							if(myId[i]==textoFiltro) 						
-							{
-								$(this).fadeIn('slow').removeClass('hidden');
-								console.log('in->' + $(this).data("group"));
-							}
-							else 
-							{
-								$(this).fadeOut('normal').addClass('hidden');
-								console.log('else->' + $(this).data("group"));
-							}
-						}
-					}
-					
-				});
-			}
-			
+		$('ul.multifilter li').click(function() {			
+			var textoFiltro = $(this).data("multifilter");
+			$('ul.multifilter li').removeClass('active');
+			$(this).addClass('active');
+			if(textoFiltro == 'todos'){
+				$('div.body-txt div.pk-promociones > div.hidden').fadeIn('slow').removeClass('hidden');
+			}else {				
+				$('.pk-promociones > div').each(function() {					
+					var myId = $(this).data("category").toString().split(",");					
+					for (i = 0; i < myId.length; i++) { 
+						change(textoFiltro , this);
+					}	
+				});				
+			}			
 			return false;
 		});
 
-
 	});
+	
+	function change(tf , t){
+		paquete = 'paq'+$(t).data("category");		
+		if( tf !== undefined){							
+			if( paquete.indexOf(tf) > -1 ){							
+				$(t).fadeIn('slow').removeClass('hidden');
+			}else{
+				$(t).fadeOut('normal').addClass('hidden');
+			}
+		}
+	}	
 		
 })(jQuery);;
