@@ -1,7 +1,5 @@
 <nav id="navbar-main" class="navbar navbar-default center" role="navigation"><!-- menu -->
-							<div class="container">
-							
-								<div class="col-xs-10 col-sm-11">
+	                            <div class="col-xs-10 col-sm-11">
 									<div class="navbar-header row">
 										<div class="col-xs-8 visible-xs data-mobile">
 											<img src="http://placehold.it/100x60" class="img-responsive">
@@ -27,6 +25,4 @@
 								<div class="col-xs-2 col-sm-1 search" data-toggle="modal" data-target="#myModalSearch"><!-- buscador -->
 									<i class="fa fa-search fa-2x" aria-hidden="true"></i>
 								</div>
-								
-							</div>
 						</nav>

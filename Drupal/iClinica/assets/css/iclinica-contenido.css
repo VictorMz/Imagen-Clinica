@@ -14,6 +14,10 @@
     font-size: 30px;
 }
 
+.text-about div{
+	padding-left: 0;
+}
+
 .content-main-study .content-result{
 	border-left: 1px solid #ff752e;
     padding: 2% 4%;
@@ -107,7 +111,11 @@
 	margin-top:8%;
 }
 
-.main .med-nuc{
+.row-vacunas .vac-name p, .body-txt #cardiologia .card-txt p:last-child, .body-txt #ginecologia .card-txt p:last-child, .body-txt #dentista .card-txt p:last-child, .body-txt #general .card-txt p:last-child{
+	font-weight: 700;
+}
+
+.main .med-nuc, list-promotions .col-sm-6:first-child ul{
 	padding: 0;
 }
 
@@ -154,10 +162,6 @@ div.card h2, .pk-promociones h2{
 
 div.row.row-vacunas {
     margin: 0;
-}
-
-.row-vacunas .vac-name p {
-    font-weight: 700;
 }
 
 .row-vacunas > div {
@@ -254,10 +258,6 @@ ul.med-nuc.multifilter {
     box-shadow: 0px 0px 7px 3px;
     color: #aba9a5;
 	text-align: center;
-}
-
-.list-promotions .col-sm-6:first-child ul {
-    padding: 0;
 }
 
 .list-promotions .col-sm-6 ul li {

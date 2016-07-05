@@ -36,8 +36,13 @@ $button =  $row->field_field_text_promotions[0]['raw']['value'];
 
 //kpr($row);
 ?>
-    <div class="col-sm-4">
+    <div class="col-sm-6 col-md-4">
 		<div class="border-shadow">
+		    <?php if(count($row->field_field_text_bbc_promotion_slogan) > 0): ?>
+		    <div class="caption">
+				<?php print $row->field_field_text_bbc_promotion_slogan[0]['raw']['value']; ?>
+			</div>
+			<?php endif; ?>
 			<img src="<?php print $image; ?>" class="img-responsive">
 			<div class="col-xs-12">
 				<a href="<?php print $url; ?>">

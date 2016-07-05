@@ -9,6 +9,10 @@ body{
     z-index:10;
 }
 
+#bs-example-navbar-collapse-c ul.navbar-nav li>ul{
+	display: none;
+}
+
 #bs-example-navbar-collapse-c ul li a{
     color: #0b2b66;
     text-transform: uppercase;
@@ -44,9 +48,9 @@ body{
     cursor: pointer;
 }
 
-#myModalSearch .search-input input.custom-search-box {
+#myModalSearch .search-input input.custom-search-box , form#user-login-form .form-item input{
     width: 250px;
-    border: none;
+    border: none; 
     margin: 15px;
     outline: 0;
     height: 2.6em;
@@ -54,7 +58,7 @@ body{
     padding: 5px;
 }
 
-#edit-actions .form-submit {
+#edit-actions .form-submit{
     color: #fff;
     background: #ff752e;
     border: 1px solid #ff752e;
@@ -80,22 +84,24 @@ body{
     border-bottom: 2px solid red;
 }
 
-.search-input input.custom-search-box.error {
+#myModalSearch .search-input input.custom-search-box.error {
     border: 2px solid red;
 }
 
-.form-actions .form-submit{
-	color: #ff752e;
+.search-form .form-actions .form-submit, input.webform-submit.button-primary.form-submit{
+    color: #ff752e;
     background: transparent;
     border: 1px solid #ff752e;
+    padding: 6px 15px;
+    border-radius: 3px;
 }
 
-.form-actions .button-primary:hover{
+.search-form .form-actions .form-submit:hover, input.webform-submit.button-primary.form-submit:hover{
 	color: #fff;
     background: #ff752e;
 }
 
-.form-actions .webform-submit.button-primary, #edit-actions .form-submit{
+.form-actions .webform-submit.button-primary, #edit-actions .form-submit, form#user-login-form input[type=submit]{
 	padding: 6px 12px;
     margin-bottom: 0;
     font-weight: 400;
@@ -173,10 +179,6 @@ footer{
     background: #dcdcdc;
     border-top: 3px solid #5f7394;
     padding-top: 10px;
-}
-
-.mv-data span.fa-stack.fa-lg.fa-pull-left {
-    margin-bottom: 7px;
 }
 
 .information-iclinica a {
@@ -268,6 +270,20 @@ footer{
 	color: #fff;
 }
 
+form#user-login-form .form-item label{
+	color: #0b2b66;
+}
+
+form#user-login-form input.form-text{	
+    margin: 5px 0;
+}
+
+form#user-login-form input[type=submit]{
+    color: #fff;
+    background: #ff752e;
+    border: 1px solid #ff752e;
+	padding: 8px;
+}
 
 form#user-register-form .form-type-textfield, form#user-login .form-type-textfield, form#user-pass .form-item{
     margin-bottom: 30px;
@@ -288,6 +304,11 @@ form#user-pass input[type=submit]{
     width: 30%;
 }
 
+.back-wt iframe{
+		border:0;
+		height: 84%;
+}
+	
 @media only screen and (min-width: 768px){
 	.top .main-menu {
 		border-top: 1px solid;
@@ -323,17 +344,15 @@ form#user-pass input[type=submit]{
 	}
 	
 	.contact-us .map .back-wt{
-		height: 420px;
+		height: 425px;
 	}
 	
-	.back-wt iframe{
-		border:0;
-		height: 80%;
+	.mv-data span.fa-stack.fa-lg.fa-pull-left {
+		margin-bottom: 30px;
 	}
-	
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 767px){
     .contact-us .contact, .options .col-sm-4{
 		margin-bottom: 40px;
 	}
@@ -342,6 +361,10 @@ form#user-pass input[type=submit]{
 		margin: 1px 0 10px;
 		border-top: 1px solid black;
 		border-bottom: 1px solid black;
+	}
+	
+	button.navbar-toggle.collapsed{
+		margin-top: 14px;
 	}
 	
 	.mv-data{

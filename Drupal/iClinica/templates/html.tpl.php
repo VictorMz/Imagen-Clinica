@@ -45,10 +45,11 @@
 ?><!DOCTYPE html>
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf_namespaces; ?> >
 
-<head profile="<?php print $grddl_profile; ?>">
+<head>
     <meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="assets/img/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<link rel="icon" type="image/png" href="assets/img/favicon.png">
 	<?php print $head; ?>
 	<title><?php print $head_title; ?></title>
 	<?php print $styles; ?>
