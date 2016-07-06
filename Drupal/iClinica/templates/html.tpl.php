@@ -52,6 +52,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.png">
 	<?php print $head; ?>
 	<title><?php print $head_title; ?></title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro" />
 	<?php print $styles; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
