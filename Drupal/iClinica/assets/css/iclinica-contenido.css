@@ -14,10 +14,11 @@
     font-size: 30px;
 }
 
-.text-about div{
+.text-about div, .list-promotions div:first-child ul{
 	padding-left: 0;
 }
 
+/* page: result */
 .content-main-study .content-result{
 	border-left: 1px solid #ff752e;
     padding: 2% 4%;
@@ -32,7 +33,7 @@
 }
 
 .content-result .row-result .col-sm-3 a i:hover {
-    color: #ff752e;
+    color: #0b2b66; /* azul */
 }
 
 .content-main-study .content-result .title-result{
@@ -48,10 +49,15 @@
 }
 
 .content-result .content-process{
-	text-align: left;	
+	text-align: left;
+	color: #0b2b66;	
 }
 
-/* menu tabs */
+.content-user input.form-text{
+	width: 100%;
+}
+
+/* menu tabs, page: tratamientos, especialidades y promociones*/
 .main ul.med-nuc{
 	display: block;
 	text-align: right;
@@ -95,8 +101,6 @@
     color: #ff752e;
 }
 
-/* fin */
-
 /* cards */
 .card-esp div.card-element{
 	padding: 2.5% 2%;
@@ -111,11 +115,11 @@
 	margin-top:8%;
 }
 
-.row-vacunas .vac-name p, .body-txt #cardiologia .card-txt p:last-child, .body-txt #ginecologia .card-txt p:last-child, .body-txt #dentista .card-txt p:last-child, .body-txt #general .card-txt p:last-child{
+.row-vacunas .vac-name p, .body-txt .card-esp .card-txt p:last-child{
 	font-weight: 700;
 }
 
-.main .med-nuc, list-promotions .col-sm-6:first-child ul{
+.main .med-nuc{
 	padding: 0;
 }
 
@@ -170,12 +174,12 @@ div.row.row-vacunas {
 	margin: 1% 0;
 }
 
-.row-vacunas .vac-name, .row-vacunas .vac-cost {
+.row-vacunas div.col-sm-6 > div {
     display: inline-block;
     width: 30%;
 }
 
-.container.search-study {
+.content-main .search-study{
     margin-bottom: 15px;
     border-top: 2px solid;
     padding-bottom: 10px;
@@ -202,7 +206,7 @@ ul.list-study-type {
 	margin-bottom: 20px;
 }
 
-.list-study-type li {
+ul.list-study-type li {
     margin: 10px 10px 0;
     border-bottom: 1px solid #ff752e;
     padding: 10px;
@@ -216,7 +220,7 @@ ul.list-study-type li:hover {
 	cursor: pointer;
 }
 
-.list-study-type li * {
+ul.list-study-type li * {
     color: #0b2b66;
 }
 
@@ -319,5 +323,9 @@ ul.med-nuc.multifilter {
 
 	.list-promotions .col-sm-6:nth-child(2) ul {
 		padding: 0;
+	}
+	
+	.card-esp div.card-element {
+		padding: 25px;
 	}
 }

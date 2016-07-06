@@ -39,10 +39,11 @@
 							<i class="fa fa-times-circle-o fa-2x fa-pull-right" data-dismiss="modal" aria-hidden="true"></i>
 						</div>
 						<div class="modal-body">
-							<div class="row search-input">
+							<div class="row search-input text-center">
 							<?php if (!empty($page['page_top_information'])): ?>
 								<?php print render($page['page_top_information']); ?>
 							<?php endif; ?>
+							<p><strong>* Es necesario llenar el campo con la palabra a buscar</strong></p>
 							 </div>
 			            </div>
 						<div class="modal-footer">

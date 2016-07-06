@@ -15,7 +15,7 @@
 					<div class="col-sm-3 content-user">
 						<?php 
 						if ($logged_in):
-							print '<div>Bienvenido: <b>'.render($user->name).'</b></div>';
+							print '<div>Bienvenido: <strong>'.render($user->name).'</strong></div>';
 							print '<p>'.render($user->mail).'</p>';	
 							print '<a href="/user/logout">Cerrar sesion</a>';						
 						endif; ?>					
