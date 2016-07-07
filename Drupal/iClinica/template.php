@@ -23,7 +23,7 @@ function iClinica_preprocess_page(&$variables){
 	
 	$variables['base_url'] = $base_url;
 	$variables['imgs_url'] = $base_url.'/'.path_to_theme();	
-	$variables['logo_200x140'] = $base_url.'/'.path_to_theme().'/assets/img/logo.jpg';
+	$variables['logo_200x140'] = $base_url.'/'.path_to_theme().'/assets/img/logo.png';
 	$variables['in_admin'] = path_is_admin(current_path()) ? TRUE : FALSE;
 	$variables['parent_page'] = isset($menu_trail[1]['link_title']) ? $menu_trail[1]['link_title']:'';
     $variables['parent_class']= isset($menu_trail[1]['options']['attributes']['class'][0]) ? $menu_trail[1]['options']['attributes']['class'][0]:'';

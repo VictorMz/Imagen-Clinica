@@ -2,7 +2,7 @@
 	                            <div class="col-xs-10 col-sm-11">
 									<div class="navbar-header row">
 										<div class="col-xs-8 visible-xs data-mobile">
-											<img src="http://placehold.it/100x60" class="img-responsive">
+											<img src="/sites/default/files/logo_mv.png" class="img-responsive">
 										</div>	
 										<div class="col-xs-4">								
 											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-c">

@@ -83,7 +83,9 @@
 					<?php include 'include/menu.php' ?>	
 				</div>
 			</div>
-	
+	        <div class="container">
+					<?php print $messages; ?>
+			</div>
 	        <?php 
 			if($node->field_image_header_section):
 			?>
