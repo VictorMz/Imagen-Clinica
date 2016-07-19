@@ -72,6 +72,10 @@
 	width: 135px;
 }
 
+.main  ul.med-nuc.list-especial li img{
+	width: 60%;
+}
+
 .main ul.med-nuc li button, div.card .card-element{
     border: 3px solid #18bdff;
     width: 120px;
@@ -103,8 +107,9 @@
 
 /* cards */
 .card-esp div.card-element{
-	padding: 2.5% 2%;
-	width: 135px;
+	padding: 22px 15px;
+    width: 135px;
+    height: 150px;
 }
 
 .list-especial p{
@@ -172,11 +177,6 @@ div.row.row-vacunas {
     display: block;
 	border-bottom: 1px solid #0b2b66;
 	margin: 1% 0;
-}
-
-.row-vacunas div.col-sm-6 > div {
-    display: inline-block;
-    width: 30%;
 }
 
 .content-main .search-study{
@@ -283,10 +283,40 @@ ul.med-nuc.multifilter {
     width: 25%;
 }
 
+.title-studies{
+	padding: 1% 5%;
+    text-transform: uppercase;
+    border: 1px solid;
+    background: #0b2b66;
+    font-weight: 700;
+	color: #fff;
+}
+
+.title-studies > div:first-child {
+    padding: 0;
+}
+
+.title-st{
+    background: #18bdff;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+}
+
+.row-vacunas div.vac-name {
+    display: inline-block;
+    width: 75%;
+}
+
+.row-vacunas div.vac-cost {
+    display: inline-block;
+    width: 20%;
+}
+
 /* media */
 
 @media only screen and (min-width: 768px){
-	.row-result div>p>span {
+	.row-result div>p>span, .list-study-type >li>div>strong {
 		display: none;
 	}
 	.card-txt{
@@ -298,7 +328,7 @@ ul.med-nuc.multifilter {
 	.content-main-study .content-user{
 		margin-bottom: 20px;
 	}
-	.row-result div>p>span {
+	.row-result div>p>span, .list-study-type >li>div>strong {
 		display: inline;
 		font-weight: 700;
 	}
@@ -325,7 +355,4 @@ ul.med-nuc.multifilter {
 		padding: 0;
 	}
 	
-	.card-esp div.card-element {
-		padding: 25px;
-	}
 }

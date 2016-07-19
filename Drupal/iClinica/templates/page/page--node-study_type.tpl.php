@@ -113,25 +113,19 @@
 				</div>
 				<?php endif; ?>
 				
-				<?php if(count($node->field_study_name_study_name) > 0):?>
-				<div class="container search-study">
-					<h3>¿Te interesa algun estudio?</h3>
-					<input type="search" id="input-search" name="s" placeholder="Buscar estudio..." >
-				</div>
+				<?php if(count($node->field_list_study) > 0):?>
+					<div class="container search-study">
+						<h3>¿Te interesa algun estudio?</h3>
+						<input type="search" id="input-search" name="s" placeholder="Buscar estudio..." >
+					</div>
 
-				<div class="row">
-					<div class="container">
-						<ul class="list-study-type">
-						<?php   foreach ($node->field_study_name_study_name['und'] as $i => $value): ?>
-							<li>
-								<?php 
-									print render($node->field_study_name_study_name['und'][$i]['safe_value']);					
-									?>
-							</li>
-						<?php   endforeach; ?>
-						</ul>
-					</div>				
-				</div>
+					<div class="row">
+						<div class="container">
+							<?php   foreach ($node->field_list_study['und'] as $i => $value): ?>
+								<?php print render($node->field_list_study['und'][$i]['safe_value']);?>
+							<?php   endforeach; ?>
+						</div>				
+					</div>
 				<?php endif; ?>
             </div>
 			<?php include 'include/footer.php' ?>

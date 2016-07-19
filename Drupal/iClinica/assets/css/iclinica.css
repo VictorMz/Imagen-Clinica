@@ -24,6 +24,7 @@ body{
     text-transform: uppercase;
 	font-size: 0.8em;
 	font-weight: 600;
+	font-family:"source sans pro";
 }
 
 #bs-example-navbar-collapse-c ul li:hover, #bs-example-navbar-collapse-c ul li.active-trail {
@@ -91,6 +92,7 @@ body{
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.6;
+	font-family:raleway;
 }
 
 .data p, .mv-data p{
@@ -128,6 +130,7 @@ body{
 	margin-bottom: 1px;
 	text-transform: uppercase;
     font-weight: 700;
+	font-family:raleway;
 }
 
 .contact .back-wt .form-area > p{
@@ -167,6 +170,7 @@ footer{
 
 .information-iclinica p {
     text-transform: uppercase;
+	font-family:"source sans pro";
 } 
 
 .social li{
