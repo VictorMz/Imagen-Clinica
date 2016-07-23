@@ -1,7 +1,0 @@
-Especialidades y Tratamientos -> es la misma funcionalidad: dar clic en el icono superior y en la misma
-pagina indicar el parrafo correspondiente (#id-del-div)
-
-Estudios -> por definir
-
-Promociones -> Es un filtro dependiendo del paquete que se elija (Hombre-Mujer-Familia), abajo en 
-las BBC se muestran depende del que se selecciono
